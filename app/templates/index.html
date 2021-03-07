@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Hello, {{ user.username }}!</h1>
+  {% for alert in alerts %}
+  <div>
+    <p>{{ alert.email }} says: <b>{{ alert.body }}</b></p>
+  </div>
+  {% endfor %}
+{% endblock %}
